@@ -1,0 +1,587 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
+
+body{
+    height: 100vh;
+    font-family: 'Inter', sans-serif;
+    background-color: #F4DFBA;
+
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "main main";
+
+    grid-template-rows: 130px 1fr;
+    grid-template-columns: 1fr 100px;
+}
+
+header{
+    z-index: 1;
+    width: 100%;
+    height: 130px;
+    position: fixed;
+    grid-area: header;
+    overflow: hidden;
+    background-color: #362A27;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 15px;
+    height: 130px;
+}
+
+.logo{
+    font-size: 80px;
+    cursor: pointer;
+}
+
+.logo_ol{
+    color: #F4DFBA;
+}
+
+.logo_ol:hover{
+    color: #aa874b;
+}
+
+.links_h a{
+    float: left;
+    color: #F4DFBA;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.links_h a:hover{
+    color: #aa874b;
+}
+
+main{
+    grid-area: main;
+}
+
+.cont{
+    color: #362A27;
+    transition: all 1s;
+    transition-delay: 0.5s;
+    padding: 50px 20px;
+}
+
+.cont_1 embed,.cont_2 embed,.cont_3 embed,
+.cont_1 h1, .cont_2 h1, .cont_3 h1,
+.cont_1 p, .cont_2 p, .cont_3 p{
+    justify-self: center;
+    align-self: center;
+    padding: 10px;
+}
+
+.cont_1{
+    display: grid;
+    grid-template-areas: 
+    "emb1 tit1"
+    "emb1 txt1";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 70% 30%;
+}
+
+.cont_1 embed{
+    grid-area: emb1;
+    width: 70%;
+}
+
+.cont_1 h1{
+    align-items: center;
+    grid-area: tit1;
+    font-size: 108px;
+    font-weight: 900;
+    max-width: 100%;
+}
+
+.cont_1 p{
+    padding: 20px;
+    grid-area: txt1;
+    font-size: 24px;
+    font-weight: 600px;
+    max-width: 594px;
+    text-align: justify;
+}
+
+.cont_2{
+    display: grid;
+    grid-template-areas: 
+    "tit2 emb2"
+    "txt2 emb2";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 30% 70%;
+}
+
+.cont_2 embed{
+    grid-area: emb2;
+    width: 70%;
+}
+
+.cont_2 h1{
+    grid-area: tit2;
+    font-size: 64px;
+    font-weight: 900;
+    max-width: 100%;
+}
+
+.cont_2 p{
+    grid-area: txt2;
+    padding-top: 20px;
+    font-size: 24px;
+    max-width: 594px;
+    text-align: justify;
+}
+
+.cont_3{
+    display: grid;
+    grid-template-areas: 
+    "emb3 tit3"
+    "emb3 txt3";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 30% 70%;
+}
+
+.cont_3 embed{
+    grid-area: emb3;
+    width: 70%;
+}
+
+.cont_3 h1{
+    grid-area: tit3;
+    font-size: 64px;
+    font-weight: 900;
+    max-width: 594px;
+}
+
+.cont_3 p{
+    grid-area: txt3;
+    padding-top: 20px;
+    font-size: 24px;
+    max-width: 594px;
+    text-align: justify;
+}
+
+aside{
+    grid-area: aside;
+}
+
+.calendario_btn{
+    position: fixed;
+    top: 150px;
+    left: calc(100% - 100px);
+    background-color: #362A27;
+    color: #F4DFBA;
+    border: none;
+    font-size: 60px;
+    padding: 10px 30px 0px 10px;
+    border-radius: 20px 0px 0px 20px;
+    box-shadow: 5px 10px 18px #2f2f2f;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.calendario_btn:hover{
+    background-color: #aa874b;
+    color: #362A27;
+}
+
+.blur{
+    filter: blur(14px);
+    transition-delay: 0s;
+}
+
+.removido{
+    background-color: #aa874bc1;
+    color: #362A27;
+    margin-left: 130px;
+    transition: all 1s;
+}
+
+.menu_cal{
+    position: fixed;
+    top: calc(50% - 300px);
+    left: calc(50% - 625px);
+    width: 1250px;
+    height: 600px;
+    background-color: #aa874bc1;
+    display: flex;
+    justify-content: space-around;
+    place-items: center;
+    transition: all 1s;
+    transition-delay: 0.5s;
+    box-shadow: 5px 10px 18px #1212129c;
+    border-radius: 50px;
+}
+
+.cal_container{
+    width: 400px;
+    height: 400px;
+    background-color: #F4DFBA;
+    box-shadow: 5px 10px 18px #1212129c;
+    border-radius: 20px;
+}
+
+.mes{
+    width: 100%;
+    height: 100px;
+    background-color: #362A27;
+    color: #F4DFBA;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.mes i{
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.mes h1{
+    font-size: 32px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.mes p{
+    font-size: 14px;
+}
+
+.dias_s{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.dias_s div{
+    font-size: 20px;
+    width: calc(100%/7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dias{
+    color: #362A27;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.dias div{
+    padding: 10px 0px;
+    font-size: 20px;
+    width: calc(100%/7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dias div:hover:not(.hoje){
+    background-color: #aa874b;
+    border: solid #362A27 -1px;
+    cursor: pointer;
+}
+
+.prev-dia, 
+.prox-dia{
+    opacity: 0.5;
+}
+
+.hoje{
+    background-color: #362A27;
+    color: #F4DFBA;
+    border-radius: 10px;
+    box-shadow: 1px 3px 5px #1212129c;
+}
+
+.contador_container{
+    width: 400px;
+    height: 400px;
+    background-color: #362a27;
+    color: #F4DFBA;
+    box-shadow: 5px 10px 18px #1212129c;
+    border-radius: 20px;
+
+    display: flex;
+    justify-items: center;
+    align-items: center
+}
+
+.contador_textos{
+    width: 100%;
+    text-align: center;
+}
+
+.contador_container h1{
+    font-size: 64px;
+    font-weight: 600;
+}
+
+.contador_container h2{
+    font-size: 32px;
+}
+
+.contador_container p{
+    padding: 10px;
+    font-size: 92px;
+    font-weight: 900;
+}
+
+.cal_btn_2{
+    position: fixed;
+    top: calc(50% - 300px);
+    left: calc(50% + 650px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border: none;
+    font-size: 60px;
+    background-color: #aa874bc1;
+    color: #362A27;
+    border-radius: 20px;
+    transition: 1s;
+    transition-delay: 0.5s;
+    box-shadow: 5px 10px 18px #1212129c;
+    cursor: pointer;
+}
+
+.cal_btn_2:hover{
+    background-color: #362a27;
+    color: #F4DFBA;
+    transition-delay: 0s;
+}
+
+.none{
+    margin-top: 100%;
+    transition-delay: 0s;
+}
+
+.logo_cel{
+    display: none;
+}
+
+@media (max-width: 1500px){
+    .cal_btn_2{
+        left: calc(50% - 35px);
+        top: calc(50% - 35px);
+        background-color: #362A27;
+        color: #F4DFBA;
+    }
+
+    .cal_btn_2:hover{
+        background-color: #aa874b;
+        color: #362A27;
+    }
+
+    .menu_cal{
+        top: 0px;
+        left: 0px;
+        height:100%;
+        width: 100%;
+        border-radius: 0px;
+    }
+}
+
+@media (max-width: 500px){
+
+    body{
+        grid-template-rows: 50px 1fr;
+    }
+
+    header{
+        height: 50px;
+        background-color: #362A27;
+    }
+
+    .menu{
+        display: none;
+    }
+
+    .logo_cel{
+        display: flex;
+        position: fixed;
+        background-color: #362A27;
+        padding: 10px;
+        border-radius: 0px 0px 10px 0px;
+
+    }
+
+    .logo_cel_ol{
+        justify-self: center;
+        align-self: center;
+        color: #F4DFBA;
+        text-align: center;
+        font-size: 50px;
+        letter-spacing: 0px;
+    }
+
+    .cont{
+        padding: 0px;
+    }
+
+    .cont embed{
+        width: 40%;
+    }
+
+    .cont h1{
+        font-size: 52px;
+    }
+
+    .cont p{
+        font-size: 24px;
+        padding-top: 100px;
+    }
+
+    .cont_1{
+        display: grid;
+        grid-template-areas: 
+        "emb1 tit1"
+        "par1 par1";
+
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50% 50%;  
+        padding: 20px;
+        margin: 0;
+    }
+
+    .cont_1 embed{
+        grid-area: emb1;
+        width: 90%;
+    }
+
+    .cont_1 h1{
+        grid-area: tit1;
+    }
+
+    .cont_1 p{
+        grid-area: par1;
+        padding: 20px 0px;
+    }
+
+    .cont_2{
+        display: grid;
+        grid-template-areas: 
+        "tit2 emb2"
+        "par2 par2";
+
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 30% 70%;  
+        padding: 20px;
+        margin: 0;
+    }
+
+    .cont_2 embed{
+        grid-area: emb2;
+        width: 90%;
+    }
+
+    .cont_2 h1{
+        grid-area: tit2;
+        font-size: 42px;
+    }
+
+    .cont_2 p{
+        grid-area: par2;
+        padding: 20px 0px;
+    }
+
+    .cont_3{
+        display: grid;
+        grid-template-areas: 
+        "emb3 tit3"
+        "par3 par3";
+
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50% 50%;  
+        padding: 20px;
+        margin: 0;
+    }
+
+    .cont_3 embed{
+        grid-area: emb3;
+        width: 90%;
+    }
+
+    .cont_3 h1{
+        grid-area: tit3;
+        font-size: 42px;
+    }
+
+    .cont_3 p{
+        grid-area: par3;
+        padding: 20px 0px;
+    }
+
+    .calendario_btn{
+        font-size: 24px;
+        padding: 10px;
+        left: calc(100% - 44px);
+        background-color: #362a27c4;
+        top: 100px;
+    }
+    
+    .menu_cal{
+        top: 0;
+        left: 0;
+        border-radius: 0;
+        box-shadow: none;
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-areas: 
+        "cal"
+        "contador";
+        grid-template-rows: 60% 40%;
+        grid-template-columns: 100%;
+    }
+
+    .cal_btn_2{
+        position: fixed;
+        font-size: 24px;
+        padding: 10px 30px 10px 10px;
+        border-radius: 20px 0px 0px 20px;
+        top: 100px;
+        left: calc(100% - 44px);
+        background-color: #aa874b;  
+    }
+
+    .cal_container{
+        grid-area: cal;
+        height: 100%;
+        width: 100%;
+        border-radius: 0;
+        background-color: #f4dfba2e;
+    }
+
+    .mes{
+        border-radius: 0;
+        padding-top: 150px;
+        background-color: #362a27;
+    }
+
+    .contador_container{
+        grid-area: contador;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        background-color: #362a27c4;
+    }
+
+    .none{
+        opacity: 0;
+    }
+}

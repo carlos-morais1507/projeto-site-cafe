@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <title>Hora do café!</title>
+</head>
+<body>
+    <header>
+        <div class="menu">
+            <div class="logo">
+                <ion-icon class="logo_ol"name="cafe-outline"></ion-icon>
+                <a href="#"></a>
+            </div><!--logo-->
+            <div class="links_h">
+                <a href="#">História</a>
+                <a href="#">Curiosidades</a>
+                <a href="#">Quiz</a>               
+            </div>
+        </div>
+        <div class="logo_cel">
+            <ion-icon class="logo_cel_ol"name="cafe-outline"></ion-icon>
+            <a href="#"></a>
+        </div><!--logo_cel-->
+    </header>
+    <main>
+        <div class="cont">
+            <div class="cont_1">
+                <embed src="assets/Group 1.svg">
+                    <h1>Hora do <br>Café!</h1>
+                    <p>Aqui nós vamos ver sobre o café, incluindo sua história, como ele é preparado e que diferenças surgiram na sua preparação desde o tempo da sua descoberta.</p>              
+            </div><!--cont_1-->
+            <div class="cont_2">
+                    <h1>Mas...<br>Porque o café?</h1>
+                    <p>Além de amarmos o café, ele extremamente versátil e pode ser preparado de diversas formas, por esse e mais motivos a bebida é mundialmente reconhecida.
+                        Além disso, por mais que o café seja tão famoso poucas pessoas sabem da sua história e principalmente do quão impactante o Brasil é na produção mundial de café. 
+                    </p>
+                <embed src="assets/Group 2.svg">
+            </div><!--cont_2-->
+            <div class="cont_3">
+                <embed src="assets/Group 3.svg">
+                    <h1>O café é tão famoso assim?</h1>
+                    <p>Sim! Navegando mais ao fundo no site você vai conseguir entender mais sobre a fama dessa bebida tão incrível. 
+                        E além disso, o Brasil é o líder exportador de café no mundo!</p>
+            </div>
+        </div> 
+        <div class="menu_cal none">
+            <div class="cal_container">
+                <div class="calendario">
+                    <div class="mes">
+                        <i class="fas fa-angle-left prev"></i>
+                        <div class="data">
+                            <h1></h1>
+                            <p></p>
+                        </div>
+                        <i class="fas fa-angle-right next"></i>
+                    </div>
+                    <div class="dias_s">
+                        <div>Dom</div>
+                        <div>Seg</div>
+                        <div>Ter</div>
+                        <div>Qua</div>
+                        <div>Qui</div>
+                        <div>Sex</div>
+                        <div>Sáb</div>
+                    </div>
+                    <div class="dias">
+                    </div>
+                </div>
+            </div>
+            <div class="contador_container">
+                <div class="contador_textos">
+                    <h1>Faltam</h1>
+                    <p class="contador"></p>
+                    <h1>dias</h1>
+                    <h2>Para o dia do café!</h2>
+                </div>
+            </div> 
+        </div>
+        <button class="calendario_btn" onclick="clicka()"><ion-icon name="calendar-outline"></ion-icon></button>
+        <button class="cal_btn_2 none" onclick="clicka()">
+            <ion-icon name="exit-outline"></ion-icon>
+        </button>
+    </main>
+    <script src="myscripts.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
