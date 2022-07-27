@@ -374,6 +374,43 @@ aside{
     display: none;
 }
 
+.carrossel{
+    display: flex;
+    background-color: aqua;
+    align-items: center;
+}
+
+.carrossel i, .carrossel img{
+    box-shadow: 5px 10px 18px #1212129c;
+}
+
+.carrossel i{
+    padding: 20px 20px;
+    background-color: #362A27;
+    color: #F4DFBA;
+    font-size: 42px;
+    transition: all 1s;
+}
+
+.carrossel i:hover{
+    background-color: #aa874b;
+    color: #362a27;
+}
+
+.ant_img{
+    border-radius: 10px 0px 0px 10px;
+}
+
+.prox_img{
+    border-radius: 0px 10px 10px 0px;
+}
+
+.carrossel_img{
+    border-radius: 70px;
+    transition: all 1s;
+}
+
+
 @media (max-width: 1500px){
     .cal_btn_2{
         left: calc(50% - 35px);
@@ -584,4 +621,6 @@ aside{
     .none{
         opacity: 0;
     }
+
+
 }
