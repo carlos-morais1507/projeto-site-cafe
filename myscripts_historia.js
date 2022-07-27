@@ -1,53 +1,47 @@
-carrossel_img = document.querySelector(".carrossel_img");
-let img_selector = 1;
+    function slider(){
+    let img_index = 1;
+    document.getElementById("radio1").checked = true;
 
-function frente(){
-    if (img_selector === 4){
-        img_selector = 1;
-    } else {
-        img_selector ++;
+    setInterval(function() {
+        frente();
+    }, 4000)
+
+    function frente(){
+    if(img_index === 5){
+        img_index = 1;
+    }  else {
+        img_index++;
     }
-    carrossel();
-    console.log(img_selector);
-}
-
-setInterval(frente, 1000);
-
-document.querySelector(".ant_img").addEventListener("click", () => {
-    if (img_selector === 1){
-        img_selector = 4;
-    } else {
-        img_selector --;
-    }
-    console.log(img_selector);
-    carrossel();
-})
-
-document.querySelector(".prox_img").addEventListener("click", () => {
-    if (img_selector === 4){
-        img_selector = 1;
-    } else {
-        img_selector ++;
-    }
-    carrossel();
-})
-
-
-function carrossel(){
-    switch (img_selector) {
-        case 1:
-            carrossel_img.src = "assets/historia/image_1.png";
-            break;
-        case 2:
-            carrossel_img.src = "assets/historia/image_2.png";
-            break;
-        case 3:
-            carrossel_img.src = "assets/historia/image_3.jpeg";
-            break;
-        case 4:
-            carrossel_img.src = "assets/historia/image_4.jpg";
-            break;                       
+    document.getElementById("radio"+img_index).checked = true;
     }
 }
 
-carrossel();
+function independencia(){
+    const d = new Date();
+    const dia = d.getDate();
+    const mes = d.getMonth() + 1;
+
+
+    const check = true;
+    
+    if(dia === 7 && mes === 9){
+        document.querySelector(".cont_esp").classList.remove("oculto");
+        document.querySelector("body").style.backgroundColor = "#f4ee85";
+        document.querySelector(".cont_h").style["color"] = "#396B47";
+        document.querySelector("header").style.backgroundColor = "#396B47"
+    }
+}
+
+let click = false;
+document.querySelector(".menu_lateral_icone").addEventListener("click", () => {
+    if(click){
+        document.querySelector(".menu_lateral_historia").classList.remove("amostra");
+        click = false;
+    } else {
+        document.querySelector(".menu_lateral_historia").classList.add("amostra");
+        click = true;
+    }
+})
+
+independencia();
+slider();
