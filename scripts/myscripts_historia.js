@@ -18,8 +18,8 @@
 
 function independencia(){
     const d = new Date();
-    const dia = d.getDate();
-    const mes = d.getMonth() + 1;
+    const dia = d.getDate()
+    const mes = d.getMonth()
 
 
     const check = true;
@@ -28,7 +28,10 @@ function independencia(){
         document.querySelector(".cont_esp").classList.remove("oculto");
         document.querySelector("body").style.backgroundColor = "#f4ee85";
         document.querySelector(".cont_h").style["color"] = "#396B47";
-        document.querySelector("header").style.backgroundColor = "#396B47"
+        document.querySelector("header").style.backgroundColor = "#396B47";
+        document.querySelector(".logo_cel_ol").style["color"] = "#f4ee85";
+        document.querySelector(".logo_cel").style.backgroundColor = "#396B47";
+        document.querySelector(".slider").style.backgroundColor = "#396B47";
     }
 }
 

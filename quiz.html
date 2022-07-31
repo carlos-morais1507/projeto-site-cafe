@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/normalize.css">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <title>Hora do café!</title>
+</head>
+<body>
+    <header>
+        <div class="menu">
+            <div class="logo">
+                <a href="index.html"><ion-icon class="logo_ol"name="cafe-outline"></ion-icon></a>
+            </div><!--logo-->
+            <div class="links_h">
+                <a class="historia_btn" href="historia.html">História</a>
+                <a class="curiosidades_btn" href="curiosidades.html">Curiosidades</a>
+                <a class="quiz_btn" href="quiz.html">Quiz</a>               
+            </div>
+        </div>
+        <div class="logo_cel">
+            <ion-icon class="logo_cel_ol"name="cafe-outline"></ion-icon>
+            <a href="#"></a>
+        </div><!--logo_cel-->
+    </header>
+    <main>
+        <section class="cont_q">
+            <div class="cont_q_1">
+                <h1>Quiz!</h1>
+                <p>Agora que você viu bastante sobre o café, está na hora de responder algumas perguntas sobre ele.<br>Será que você consegue?</p>
+            </div>
+            <div class="cont_q_2">
+                <h2>1. Em que país o café surgiu?</h2>
+                <fieldset id="quiz_1">
+                <input type="radio" name="quiz_1" id="radio1_1" onclick="quiz_1()"><label class="radio1_1" for="radio1_1">Brasil</label>
+                <input type="radio" name="quiz_1" id="radio2_1" onclick="quiz_1()"><label class="radio2_1" for="radio2_1">Cuba</label>
+                <input type="radio" name="quiz_1" id="radio3_1" onclick="quiz_1()"><label class="radio3_1" for="radio3_1">Etiópia</label>
+                <input type="radio" name="quiz_1" id="radio4_1" onclick="quiz_1()"><label class="radio4_1" for="radio4_1">Itália</label>
+                </fieldset>
+            </div>
+            <div class="cont_q_3">
+                <h2>2. Que nação é a maior exportadora de café no mundo?</h2>
+                <fieldset id="quiz_2">
+                <input type="radio" name="quiz_2" id="radio1_2" onclick="quiz_2()"><label class="radio1_2" for="radio1_2">França</label>
+                <input type="radio" name="quiz_2" id="radio2_2" onclick="quiz_2()"><label class="radio2_2" for="radio2_2">Cuba</label>
+                <input type="radio" name="quiz_2" id="radio3_2" onclick="quiz_2()"><label class="radio3_2" for="radio3_2">Índia</label>
+                <input type="radio" name="quiz_2" id="radio4_2" onclick="quiz_2()"><label class="radio4_2" for="radio4_2">Brasil</label>
+                </fieldset>
+            </div>
+            <div class="cont_q_4">
+                <h2>3. Qual é o nome da forma de advinhar o futuro usando borras de café?</h2>
+                <fieldset id="quiz_3">
+                <input type="radio" name="quiz_3" id="radio1_3" onclick="quiz_3()"><label class="radio1_3" for="radio1_3">Cafeísmo</label>
+                <input type="radio" name="quiz_3" id="radio2_3" onclick="quiz_3()"><label class="radio2_3" for="radio2_3">Cafeomancia</label>
+                <input type="radio" name="quiz_3" id="radio3_3" onclick="quiz_3()"><label class="radio3_3" for="radio3_3">Cafeína</label>
+                <input type="radio" name="quiz_3" id="radio4_3" onclick="quiz_3()"><label class="radio4_3" for="radio4_3">Borrismo</label>
+                </fieldset>
+            </div>
+            <div class="cont_q_5">
+                <h2>4. Em que ano o café chegou na Itália?</h2>
+                <fieldset id="quiz_4">
+                <input type="radio" name="quiz_4" id="radio1_4" onclick="quiz_4()"><label class="radio1_4" for="radio1_4">1570</label>
+                <input type="radio" name="quiz_4" id="radio2_4" onclick="quiz_4()"><label class="radio2_4" for="radio2_4">1784</label>
+                <input type="radio" name="quiz_4" id="radio3_4" onclick="quiz_4()"><label class="radio3_4" for="radio3_4">1038</label>
+                <input type="radio" name="quiz_4" id="radio4_4" onclick="quiz_4()"><label class="radio4_4" for="radio4_4">1673</label>
+                </fieldset>
+            </div>
+            <div class="cont_q_6">
+                <h2>5. Onde o café já foi proibido?</h2>
+                <fieldset id="quiz_5">
+                <input type="radio" name="quiz_5" id="radio1_5" onclick="quiz_5()"><label class="radio1_5" for="radio1_5">Vaticano</label>
+                <input type="radio" name="quiz_5" id="radio2_5" onclick="quiz_5()"><label class="radio2_5" for="radio2_5">Egito</label>
+                <input type="radio" name="quiz_5" id="radio3_5" onclick="quiz_5()"><label class="radio3_5" for="radio3_5">Meca</label>
+                <input type="radio" name="quiz_5" id="radio4_5" onclick="quiz_5()"><label class="radio4_5" for="radio4_5">Rússia</label>
+                </fieldset>
+            </div>
+            <div class="cont_q_7">
+                <h2>6. Qual é o nome do homem que inventou o café expresso?</h2>
+                <fieldset id="quiz_6">
+                <input type="radio" name="quiz_6" id="radio1_6" onclick="quiz_6()"><label class="radio1_6" for="radio1_6">Charles Albert</label>
+                <input type="radio" name="quiz_6" id="radio2_6" onclick="quiz_6()"><label class="radio2_6" for="radio2_6">George Washington</label>
+                <input type="radio" name="quiz_6" id="radio3_6" onclick="quiz_6()"><label class="radio3_6" for="radio3_6">James Dylan</label>
+                <input type="radio" name="quiz_6" id="radio4_6" onclick="quiz_6()"><label class="radio4_6" for="radio4_6">John Doe</label>
+                </fieldset>
+            </div>
+            <div class="cont_q_8">
+                <h2>7. Qual é a substância química mais famosa ligada ao café?</h2>
+                <fieldset id="quiz_7">
+                <input type="radio" name="quiz_7" id="radio1_7" onclick="quiz_7()"><label class="radio1_7" for="radio1_7">Caseína</label>
+                <input type="radio" name="quiz_7" id="radio2_7" onclick="quiz_7()"><label class="radio2_7" for="radio2_7">Cafeína</label>
+                <input type="radio" name="quiz_7" id="radio3_7" onclick="quiz_7()"><label class="radio3_7" for="radio3_7">Cálcio</label>
+                <input type="radio" name="quiz_7" id="radio4_7" onclick="quiz_7()"><label class="radio4_7" for="radio4_7">Cafeótidas</label>
+                </fieldset>
+            </div>
+            <div class="cont_q_9">
+                <h2>8. Qual nome era usado pelo Vaticano com o intuito de demonizar o café?</h2>
+                <fieldset id="quiz_8">
+                <input type="radio" name="quiz_8" id="radio1_8" onclick="quiz_8()"><label class="radio1_8" for="radio1_8">Demônio Negro</label>
+                <input type="radio" name="quiz_8" id="radio2_8" onclick="quiz_8()"><label class="radio2_8" for="radio2_8">Bebida Maldita</label>
+                <input type="radio" name="quiz_8" id="radio3_8" onclick="quiz_8()"><label class="radio3_8" for="radio3_8">Bebida do Diabo</label>
+                <input type="radio" name="quiz_8" id="radio4_8" onclick="quiz_8()"><label class="radio4_8" for="radio4_8">N/A</label>
+                </fieldset>
+            </div>
+            <div class="cont_q_10">
+                <h2>9. Que país começou a usar açúcar no café?</h2>
+                <fieldset id="quiz_9">
+                <input type="radio" name="quiz_9" id="radio1_9" onclick="quiz_9()"><label class="radio1_9" for="radio1_9">França</label>
+                <input type="radio" name="quiz_9" id="radio2_9" onclick="quiz_9()"><label class="radio2_9" for="radio2_9">Itália</label>
+                <input type="radio" name="quiz_9" id="radio3_9" onclick="quiz_9()"><label class="radio3_9" for="radio3_9">Brasil</label>
+                <input type="radio" name="quiz_9" id="radio4_9" onclick="quiz_9()"><label class="radio4_9" for="radio4_9">Inglaterra</label>
+                </fieldset>
+            </div>
+            <div class="cont_q_11">
+                <h2>10. Qual era o estado do Brasil que mais exportava café no céculo XIX?</h2>
+                <fieldset id="quiz_10">
+                <input type="radio" name="quiz_10" id="radio1_10" onclick="quiz_10()"><label class="radio1_10" for="radio1_10">Rio de Janeiro</label>
+                <input type="radio" name="quiz_10" id="radio2_10" onclick="quiz_10()"><label class="radio2_10" for="radio2_10">São Paulo</label>
+                <input type="radio" name="quiz_10" id="radio3_10" onclick="quiz_10()"><label class="radio3_10" for="radio3_10">Espírito Santo</label>
+                <input type="radio" name="quiz_10" id="radio4_10" onclick="quiz_10()"><label class="radio4_10" for="radio4_10">Paraná</label>
+                </fieldset>
+            </div>
+        </section>
+    </main>
+
+    <script src="scripts/myscripts_quiz.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>    
+</body>
