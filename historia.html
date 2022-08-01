@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,7 +15,7 @@
     <header>
         <div class="menu">
             <div class="logo">
-                <a href="index.html"><ion-icon class="logo_ol"name="cafe-outline"></ion-icon></a>
+                <a href="index.html"><ion-icon class="logo_ol" name="cafe-outline"></ion-icon></a>
             </div><!--logo-->
             <div class="links_h">
                 <a class="historia_btn" href="historia.html">História</a>
@@ -24,8 +24,7 @@
             </div>
         </div>
         <div class="logo_cel">
-            <ion-icon class="logo_cel_ol"name="cafe-outline"></ion-icon>
-            <a href="#"></a>
+            <ion-icon class="logo_cel_ol" name="cafe-outline" onclick="menu_cel()"></ion-icon>
         </div><!--logo_cel-->
     </header>
     <main>
@@ -143,10 +142,19 @@
                 </ul>
             </div>
         </section>
+        <div class="menu_cel none">
+            <div class="cel_links">
+                <a href="index.html">Página Inicial</a>
+                <a href="historia.html">História</a>
+                <a href="curiosidades.html">Curiosidades</a>
+                <a href="quiz.html">Quiz</a>
+            </div>
+        </div>
     </main>
 
 
     <script src="scripts/myscripts_historia.js"></script>
+    <script src="scripts/myscripts_menu.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>    
 </body>

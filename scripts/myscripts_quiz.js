@@ -68,3 +68,45 @@ function quiz_10() {
     document.querySelector(".radio4_10").style["color"] = "#6b3939";
 }
 
+var personagem = document.querySelector(".personagem");
+var bloco = document.querySelector(".bloco");
+var score = 0;
+var morto = true;
+
+
+
+var morte = setInterval(function(){
+    var p_top = parseInt(window.getComputedStyle(personagem).getPropertyValue("top"));
+    var b_left = parseInt(window.getComputedStyle(bloco).getPropertyValue("left"));
+
+
+    if(b_left<40 && b_left > 0 && p_top >=125){
+        alert("Você Perdeu! Sua pontuação foi de " + score + " pontos!")
+        bloco.classList.remove("start");
+        morto = true;
+    }
+
+}, 10);
+
+var score_e_dif = setInterval(function(){
+    if(morto === false){
+        score++;
+    }
+}, 1000)
+
+
+function pulo(){
+    if(personagem.classList != "pular"){
+        personagem.classList.add("pular");
+    }
+    setTimeout(function(){
+        personagem.classList.remove("pular");    
+    }, 500);
+}
+
+function start(){
+    score = 0;
+    bloco.classList.add("start");
+    morto = false;
+}
+
